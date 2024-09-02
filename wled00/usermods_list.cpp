@@ -206,6 +206,9 @@
 #ifdef USERMOD_AUTO_PLAYLIST
 #include "../usermods/usermod_v2_auto_playlist/usermod_v2_auto_playlist.h"
 #endif
+#ifdef USERMOD_TETRISAI
+  #include "../usermods/TetrisAI_v2/usermod_v2_tetrisai.h"
+#endif
 
 void registerUsermods()
 {
@@ -409,5 +412,8 @@ void registerUsermods()
   usermods.add(new AutoPlaylistUsermod(false));
 #endif
 
+#ifdef USERMOD_TETRISAI
+  usermods.add(new TetrisAIUsermod());
+#endif
 
 }
